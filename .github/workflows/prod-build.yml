@@ -31,7 +31,7 @@ jobs:
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
-          registry: ${{ env.REGISTRY }}
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -45,6 +45,7 @@ jobs:
           tags: |
             ghcr.io/startswithaj/gluetun-qbittorrent-port-manager:${{ env.tag }}
             ghcr.io/startswithaj/gluetun-qbittorrent-port-manager:latest
+
 
 
 

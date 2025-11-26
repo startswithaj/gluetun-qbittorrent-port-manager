@@ -5,6 +5,7 @@ name: prod-build
     branches:
       - main
 
+
 jobs:
   build-and-push-alpine-image:
     runs-on: ubuntu-latest
@@ -44,4 +45,5 @@ jobs:
           tags: |
             ghcr.io/startswithaj/gluetun-qbittorrent-port-manager:${{ env.tag }}
             ghcr.io/startswithaj/gluetun-qbittorrent-port-manager:latest
+
 

@@ -1,11 +1,9 @@
 name: prod-build
 
 "on":
-  pull_request:
+  push:
     branches:
       - main
-    types:
-      - closed
 
 jobs:
   build-and-push-alpine-image:
@@ -44,5 +42,6 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/thetaylorlee/gluetun-qbittorrent-port-manager:${{ env.tag }}
-            ghcr.io/thetaylorlee/gluetun-qbittorrent-port-manager:latest
+            ghcr.io/startswithaj/gluetun-qbittorrent-port-manager:${{ env.tag }}
+            ghcr.io/startswithaj/gluetun-qbittorrent-port-manager:latest
+
